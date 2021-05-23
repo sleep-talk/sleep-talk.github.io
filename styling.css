@@ -1,0 +1,251 @@
+            body {
+			
+			background-image: url(images/bg.gif);
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			
+			}
+	
+			ul {
+			
+			list-style-type: none;
+			overflow: hidden;
+			
+			}
+			
+            .cartq{
+            border-bottom: 2px solid black;
+            width: 250px;
+            text-align: center;
+            font-size: 24pt;
+            }
+			
+            .cart{
+            font-size: 20pt;
+            color: #000150;
+
+            }
+			
+            li1{
+            font-size: 20pt;
+            margin-top: 50px;
+            }
+			
+            .form-control{
+            width: 400px;
+            }
+			
+			li {
+			
+			float: right;
+			font-size: 2vw;
+			padding-top: 6vw;
+			padding-right: 2vw;
+			padding-bottom: 1vw;
+			padding-left: 1vw;
+			font-family: 'Mulish';
+			
+			}
+			
+			img {
+			
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			
+			}
+			
+			a {
+	
+			font-size: 2vw;
+			font-family: 'Mulish';
+			text-align: center;
+			
+			}
+			
+		
+			
+			p, h5{
+			color: #000152;
+			font-family: 'Mulish';
+			}
+			
+			a:link {
+			
+			color: #000152;
+			text-decoration: none;
+			
+			}
+			
+			a:visited {
+			
+			color: #000152;
+			text-decoration: none;
+			
+			}
+			
+			a:hover {
+			
+			font-size: 2.2vw;
+			color: #663a6e;
+			text-decoration: none;
+			
+			}
+			
+			a:active {
+			
+			color: #663a6e;
+			text-decoration: none;
+			
+			}
+
+			.prod_image {
+				font-size: 2vw;
+				font-family: 'Mulish';
+				text-align: center;
+			}
+
+			.prod_image:visited {
+
+				color: #000152;
+				text-decoration: none;
+
+			}
+			.prod_image:hover {
+
+				font-size: 2.2vw;
+			color: #663a6e;
+			text-decoration: none;
+			
+			}
+
+			.prod_image:active {
+				color: #663a6e;
+			text-decoration: none;
+			}
+            p:hover {
+			
+			font-size: 2.2vw;
+			color:#663a6e;
+			text-decoration: none;
+			
+			}
+			
+			p:active {
+			
+			color: #663a6e;
+			text-decoration: none;
+			
+			}
+
+			.profiles {
+			
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			border-radius: 50%;
+			
+			}
+            .btn-primary{
+            margin-bottom: 30px;
+            }
+            .btn{
+            margin-top: 20px;
+            }
+            #total{
+            font-size: 20pt;
+            }
+            .btn-danger{
+            margin-bottom: 15px;
+            margin-top: 10px;
+            font-size: 13px;
+            }
+			.title {
+			font-family: 'Red Hat Display';
+			font-size: 8vw;
+			color:#000152;
+			float: left;
+            margin-top: 0px;
+            padding-top: 0px;
+			
+			}
+			
+			.sizing {
+				width: 250px;
+			}
+			
+			#categories {
+			
+			font-family: 'Red Hat Display';
+			font-size: 3vw;
+			color: #000152;
+			
+			}
+			
+			.cartHeadings{
+			font-family: 'Red Hat Display';
+			color: #000152;
+			}
+			
+			.cartInputs{
+			font-family: 'Red Hat Display';
+			color: #000152;
+			}
+	
+			.atcbt{
+				background-color: #000152;
+				color: white;
+			}
+
+			.atcbt:hover{
+				background-color: #663a6e;
+				color: white;
+			}
+			
+			.navi{
+				font-size: 1.5vw;
+			}
+			
+			
+			
+			@media screen and (max-width: 999px) {
+			
+				.title {
+				font-size: 9vw;
+				text-align: left;
+				}
+				
+				#categories {
+				font-size: 5.5vw;
+				}
+			
+				a {
+				font-size: 5vw;
+				}
+				
+				.navi {
+				font-size: 1vw;
+				}
+			
+			}
+			
+			@media screen and (max-width: 580px) {
+				.title {
+				font-size: 8vw;
+				text-align: left;
+				}
+				
+				#categories {
+				font-size: 5vw;
+				}
+			
+				a {
+				font-size: 5vw;
+				}
+				
+				.navi {
+				font-size: 0.7vw;
+				}
+			
+			}

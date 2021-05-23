@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+	
+        <title>Sleep Talk-Pillows</title>
+        <meta charset="UTF-8">
+		<meta name="author" content="choy, medrano,sangalang, tengonciang">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="description" content="cs 4q project">
+		<meta name="revised" content="12/5/2021">
+		
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">		
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@900&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@900&display=swap" rel="stylesheet">
+		<link rel="icon" href="../images/pillow.png">
+		
+		<link rel="stylesheet" href="../styling.css">
+        <script>
+            var cust_order = [];
+            var a = JSON.parse(sessionStorage.getItem("jsArray"));
+            if (a != null){
+                cust_order = JSON.parse(sessionStorage.getItem("jsArray"));
+            }
+            function item1(){
+                var itemss = {
+                    prod_name: "Cloud Pillow",
+                    prod_price: 400,
+                }
+                cust_order.push(itemss);
+                sessionStorage.setItem("jsArray", JSON.stringify(cust_order));
+                alert("Added 1 cloud pillow to cart.");
+            }
+             function item2(){
+                var itemss2 = {
+                    prod_name: "Night Pillow",
+                    prod_price: 375,
+                }
+                cust_order.push(itemss2);
+                sessionStorage.setItem("jsArray", JSON.stringify(cust_order));
+                 alert("Added 1 night pillow to cart.");
+            }
+            function item3(){
+                var itemss = {
+                    prod_name: "Creeper Pillow",
+                    prod_price: 360,
+                }
+                cust_order.push(itemss);
+                sessionStorage.setItem("jsArray", JSON.stringify(cust_order));
+                alert("Added 1 creeper pillow to cart.");
+            }
+            function item4(){
+                var itemss = {
+                    prod_name: "Cute Pillow",
+                    prod_price: 350,
+                }
+                cust_order.push(itemss);
+                sessionStorage.setItem("jsArray", JSON.stringify(cust_order));
+                alert("Added 1 cute pillow to cart.");
+            }
+            function item5(){
+                var itemss = {
+                    prod_name: "Panda Pillow",
+                    prod_price: 325,
+                }
+                cust_order.push(itemss);
+                sessionStorage.setItem("jsArray", JSON.stringify(cust_order));
+                alert("Added 1 panda pillow to cart.");
+            }
+            function item6(){
+                var itemss = {
+                    prod_name: "Cat Pillow",
+                    prod_price: 400,
+                }
+                cust_order.push(itemss);
+                sessionStorage.setItem("jsArray", JSON.stringify(cust_order));
+                alert("Added 1 cat pillow to cart.");
+            }
+        </script>
+	</head>
+	
+	<body>
+	
+	<div class="container-fluid">
+	<ul>
+		  <li><a class="navi" href="../index.html">Back</a></li>
+		  <li><a class="navi" href="../cart.html">Cart</a></li>
+	      <li><a class="navi" href="blankets.html">Blankets</a></li>
+		  <li><a class="navi" href="towels.html">Towels</a></li>
+		  <li><a class="navi" href="plushies.html">Plushies</a></li>
+		  <li class="title">Relax Right.</li>
+	</ul>
+
+	</div>
+	
+	<div class="container">
+	
+		<div class="container p-6">
+			<h1 id="categories">Pillows</h1>
+		</div>
+		
+			<div class="row marginstyles">
+		
+				<div class="container col-sm">
+                    <div class="prod_image">
+                        <img src="../images/pillow1.png" alt="pillow1" class="sizing"><p>Cloud Pillow</p>
+                        <p><button class="btn atcbt" onclick="item1()">Add to cart</button></p>
+                    </div>
+                    <div class="prod_image">
+                        <img src="../images/pillow4.png" alt="pillow4" class="sizing"><p>Night Pillow</p>
+                        <p><button class="btn atcbt" onclick="item2()">Add to cart</button></p>
+                    </div>
+                </div>
+			
+				<div class="container col-sm">
+                    <div class="prod_image">
+                        <img src="../images/pillow2.png" alt="pillow2" class="sizing"><p>Creeper Pillow</p>
+                        <p><button class="btn atcbt" onclick="item3()">Add to cart</button></p>
+                    </div>
+                    <div class="prod_image">
+                        <img src="../images/pillow5.png" alt="pillow5" class="sizing"><p>Cute Pillow</p>
+                        <p><button class="btn atcbt" onclick="item4()">Add to cart</button></p>
+                    </div>
+                </div>
+			
+				<div class="container col-sm">
+					<div class="prod_image">
+                        <img src="../images/pillow3.png" alt="pillow3" class="sizing"><p>Panda Pillow</p>
+                        <p><button class="btn atcbt" onclick="item5()">Add to cart</button></p>
+                    </div>
+                    <div class="prod_image">
+                        <img src="../images/pillow6.png" alt="pillow6" class="sizing"><p>Cat Pillow</p>
+                        <p><button class="btn atcbt" onclick="item6()">Add to cart</button></p>
+                    </div>
+                </div>
+				
+		</div>
+		
+	</div>
+	
+	
+		
+	</body>
+	
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+	
+        <title>Sleep Talk-Cart</title>
+        <meta charset="UTF-8">
+		<meta name="author" content="choy, medrano,sangalang, tengonciang">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="description" content="cs 4q project">
+		<meta name="revised" content="12/5/2021">
+		
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">		
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@900&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@900&display=swap" rel="stylesheet">
+		<link rel="icon" href="images/pillow.png">
+		
+		<link rel="stylesheet" href="styling.css">
+		<script>
+            var mama = "momomm";
+            cust_order = JSON.parse(sessionStorage.getItem("jsArray"));
+            sessionStorage.setItem("cust_order", JSON.stringify(cust_order));
+            function lol(){
+                var cartTotal = 0;
+                if (cartTotal == 0){
+                    document.getElementById('total').innerHTML = "TOTAL PRICE: 0";
+                }
+                for(var i=0; i<cust_order.length; i++) {
+                document.getElementById('bruh').innerHTML += "<li1>" + cust_order[i].prod_name+ "....." + cust_order[i].prod_price + "<br><button class='btn atcbt' id='"+i+"' onclick='remove(this.id)'>REMOVE</button><br></li1>";
+                cartTotal += cust_order[i].prod_price;
+                document.getElementById('total').innerHTML = "TOTAL PRICE: "+cartTotal;
+                document.getElementById("cust_order").value = JSON.stringify(cust_order);
+                }
+            }
+            function remove(clicked){
+                cust_order2 = JSON.parse(sessionStorage.getItem("cust_order"));
+                cust_order2.splice(clicked,1);
+                sessionStorage.setItem("cust_order", JSON.stringify(cust_order2));
+                sessionStorage.setItem("jsArray", JSON.stringify(cust_order2)); 
+                location.reload(true);
+                    
+            }
+            function cust_info(){
+            if(document.getElementById('cust_name').value==""||(document.getElementById('cust_addr').value==""||document.getElementById('cust_email').value=="")){
+                alert("Incomplete Information!");
+                return false;
+                }
+            else{
+                cust_order.splice(0,100);
+                sessionStorage.setItem("cust_order", JSON.stringify(cust_order));
+                sessionStorage.setItem("jsArray", JSON.stringify(cust_order)); 
+                location.reload(true);
+                document.getElementById('submit').type="submit";
+                document.getElementById('form').action="http://savantandsparktest.ml/checkout.php";
+                document.getElementById('form').method="POST";
+            }
+        }
+        </script>
+	</head>
+	
+	<body onload="lol()">
+	
+	<div class="container-fluid">
+	<ul>
+		  <li><a class="navi" href="about.html" >About</a></li>
+		  <li><a class="navi" href="index.html">Home</a></li>
+		  <li class= "title">Relax Right.</li>
+	</ul>
+
+	</div>
+	
+	<div class="container">
+	
+		<div class="container p-6">
+			<h1 id="categories">Cart</h1>
+		
+			<div class="row marginstyles">
+			
+				<div class="container col-sm cartInputs" id="bruh">
+			
+				
+				</div>
+				
+		</div>
+		
+		<div class="form-group">
+            <div class="cartHeadings" id="total">TOTAL PRICE: </div>
+            <form id="form">
+                <div>
+                    <input type="hidden" id="cust_order" class="form-control" name="cust_order">
+                </div>
+				<div>
+					<label class="cartInputs" for="cust_name">Name:</label>
+					<input type="text" id="cust_name" class="form-control" name="cust_name">
+				</div>
+				<div>
+					<label class="cartInputs" for="cust_email">Email:</label>
+					<input type="email" id="cust_email" class="form-control" name="cust_email">
+				</div>
+				<div>
+					<label class="cartInputs" for="cust_addr">Address:</label>
+					<input type="text" id="cust_addr" class="form-control" name="cust_addr">
+				</div>
+				<p><button id="submit" type="button" onclick="cust_info()" class="btn atcbt">Checkout</button></p>
+			</form>
+		</div>
+	</div>
+	</div>
+	
+		
+	</body>
+	
+</html>
