@@ -46,12 +46,14 @@
                 location.reload(true);
                     
             }
-            function cust_info(){
+           function cust_info(){
+                var at =  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                var mail = document.getElementById('cust_email').value;
             if(document.getElementById('cust_name').value==""||(document.getElementById('cust_addr').value==""||document.getElementById('cust_email').value=="")){
                 alert("Incomplete Information!");
                 return false;
                 }
-            else{
+            else if (at.test(mail)){
                 cust_order.splice(0,100);
                 sessionStorage.setItem("cust_order", JSON.stringify(cust_order));
                 sessionStorage.setItem("jsArray", JSON.stringify(cust_order)); 
@@ -59,6 +61,10 @@
                 document.getElementById('submit').type="submit";
                 document.getElementById('form').action="http://savantandsparktest.ml/checkout.php";
                 document.getElementById('form').method="POST";
+                
+            }
+            else{
+                alert('Please enter a valid email address!');
             }
         }
         </script>
